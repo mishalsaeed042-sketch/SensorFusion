@@ -451,8 +451,8 @@ bool SF::initQuat(float ax, float ay, float az, float mx, float my, float mz){
 		float m[3];
 		recipNorm = invSqrt(mx * mx + my * my + mz * mz);
 		m[0] = mx * recipNorm;
-		m[1] = mx * recipNorm;
-		m[2] = mx * recipNorm;
+		m[1] = my * recipNorm;
+		m[2] = mz * recipNorm;
         
 		// Calculate East
 		vectorCross(m, D, E);
